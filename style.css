@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eee;
+  padding: 100px;
+}
+#parent h1 {
+  font-size: 40px;
+  color: #333;
+}
+#parent .border {
+  width: 120px;
+  height: 3px;
+  background-color: #D91656;
+  margin: 7px 0 30px;
+}
+#parent .row {
+  display: flex;
+  justify-self: center;
+  text-align: center;
+}
+#parent .row .col {
+  background-color: #e7e7e7;
+  margin: 0 25px;
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: 0.5s;
+}
+#parent .row .col:hover {
+  background-color: #D91656;
+  cursor: pointer;
+}
+#parent .row .col:hover h2,
+#parent .row .col:hover p{
+  color: #fff;
+}
+#parent .row .col:hover .stars i {
+  color: #eee;
+}
+#parent .row .col img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+#parent .row .col h2 {
+  font-size: 25px;
+  color: #444;
+}
+#parent .row .col .stars {
+  margin: 15px 0;
+}
+#parent .row .col .stars i {
+  color: #D91656;
+}
+#parent .row .col p {
+  line-height: 1.4;
+  color: #666;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+  #parent .row {
+    flex-direction: column;
+  }
+    #parent .row .col {
+      margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1000px) {
+  #parent {
+    padding: 70px;
+  }
+
+  #parent .row {
+    flex-direction: column;
+  }
+
+  #parent .row .col {
+    margin-bottom: 25px;
+  }
+}
